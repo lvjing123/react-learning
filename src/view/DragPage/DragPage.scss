@@ -1,0 +1,19 @@
+.drag-container {
+    display: flex;
+    .left-group {
+        flex: 30%;
+        .component {
+            height: 30px;
+            width: 100px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+    .right-group{
+        flex: 30%;
+    }
+}

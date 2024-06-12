@@ -1,0 +1,17 @@
+.pro-conatiner{
+  .title-text {
+    background-image: linear-gradient(to right, orange, purple);
+    color: transparent;
+    font-size: 30px;
+    width: 100%;
+    background-clip:text;
+  }
+  .pro-carousel-container {
+    width: 500px;
+    .pro-carousel {
+      height: 500px;
+    }
+  }
+  
+  
+}

@@ -1,0 +1,35 @@
+.base-container{
+  min-height: 600px;
+  max-height: 100vh;
+  .header{
+    position: fixed; // 固定头部
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .header-div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color:#fff;
+    }
+  }
+  .content {
+    height: 100%;
+    overflow: auto;
+    .left-sider-container{
+      width: var(--base-left-slider-width);
+      height: calc(100vh - var(--base-header-height));
+      position: fixed;
+      left: 0;
+      top: var(--base-header-height);
+      bottom: 0;
+      overflow: auto;
+    }
+    .content-container{
+      padding: var(--base-content-padding);
+      margin-left: var(--base-left-slider-width);
+      margin-top: var(--base-header-height);
+    }
+  }
+}

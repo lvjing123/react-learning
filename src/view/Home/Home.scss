@@ -1,0 +1,36 @@
+body {
+    position: relative;
+    // background: linear-gradient(to right bottom, #6005ED,#AB05ED);
+}
+.home-container {
+    position: relative;
+    height: 100%;
+    .home-back-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+    }
+    .home-content {
+        height: calc(100vh);
+        .card-container {
+            height: 300px;
+            width: 400px;
+            position: relative;
+            .user-info {
+                font-size: 14px;
+                line-height: 30px;
+                .value {
+                    font-weight: 500;
+                }
+            }
+            .skill-item::before {
+                content: '.';
+                color: black;
+                font-size: 28px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+}

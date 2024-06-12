@@ -1,0 +1,44 @@
+//含有列表页面的
+.common-bg{
+  margin: 20px;
+  .common-content-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .common-content-search{
+    margin: 10px 0;
+    // 搜索的每个元素
+    .search-item{
+      width: 250px;
+      margin-right: 20px;
+    }
+  }
+  .common-content-table{
+    margin-top: 20px;
+    .delete-a{
+      color: red;
+    }
+  }
+}
+.transfer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ant-transfer-list{
+    width: 260px;
+  }
+}
+
+.base-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.base-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
