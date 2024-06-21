@@ -7,7 +7,9 @@ import Login from "@/view/Login/Login";
 import LayoutBase from "@/view/Layout/LayoutBase";
 import OrgManage from "@/view/OrgManage/OrgManage";
 import ProManage from "@/view/ProManage/ProManage";
-import DragPage from "@/view/DragPage/DragPage"
+import DragPage from "@/view/DragPage/DragPage";
+import DemoPage from "@/view/ContextDemo/index"
+
 
 
 const routerEls = [
@@ -25,7 +27,8 @@ const routerEls = [
       children: [
         { path: 'org', element: <OrgManage /> },
         { path: "pro", element: <ProManage /> },
-        { path: "drag", element: <DragPage /> }
+        { path: "drag", element: <DragPage /> },
+        { path: "demo", element: <DemoPage /> }
       ]
     }
     ]

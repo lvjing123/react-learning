@@ -1,30 +1,27 @@
+import React from 'react'
+import PropTypes from 'prop-types';
 import { Modal, Input, Form, InputNumber } from 'antd';
-import React from 'react';
-import '../../common/common.scss';
 
-class OrgDialog extends React.Component {
+class StudentAdd extends  React.Component {
     constructor(props) {
         super(props);
         this.refForm = React.createRef();
         this.state = {
             confirmLoading:false,
-            transferDataSource:[],
-            targetKeys:[],
-            selectedKeys:[],
         }
     }
+    // onAddStudent = () => {
+    //     const newStudent = {
+    //         name: '新增的',
+    //         age: 0,
+    //         score: 0,
+    //         gender: '男',
+    //         id: 5,
+    //     }
+    // }
 
-    //点击确认
-    handleOk = async () => {
-        // await this.setState({
-        //     confirmLoading: true
-        // })
-        // 1：form 是 model 子组件
-        // 2：在constructor 中定义 this.refForm = React.createRef();
-        // 3：在form 元素上 通过ref 关联 this.refForm
-        // 4：通过 this.refForm.current 取得表单 并验证
-        // console.log(this.refForm.current,'this.refForm.current')
-        // 发起校验
+       //点击确认
+       handleOk = async () => {
         try {
             const successValues = await this.refForm.current.validateFields();
             console.log('Success:', successValues);
@@ -34,7 +31,8 @@ class OrgDialog extends React.Component {
                 console.log(dataForm,'==========')
                 // 正常的交互逻辑是1: 请求接口，2: 关闭弹窗
                 // 现在是模拟，1: 将弹窗的数据，给到父组件 2: 关闭弹窗
-                this.props.save(dataForm)
+                // this.props.onAddStudent(newStudent) // 不用context 传值
+                this.context.addStudent(dataForm)
                 this.props.close()
             }
         } catch (error) {
@@ -46,11 +44,13 @@ class OrgDialog extends React.Component {
         this.props.close()
     }
 
+
     render() {
-        // 需要使用从父组件传来的值，要在render 中使用，可以不用在state 中处理了
-        const { open, title } = this.props;
-        return (
-            <Modal
+      const { open, title } = this.props;
+      console.log(this.props.title)
+      return (
+            <>
+             <Modal
                 title={title}
                 open={open}
                 onOk={this.handleOk}
@@ -71,24 +71,37 @@ class OrgDialog extends React.Component {
                             },
                         ]}
                     >
-                        <Input placeholder="组织名称" />
+                        <Input placeholder="名称" />
                     </Form.Item>
                     <Form.Item
-                        label="members"
-                        name="members"
+                        label="age"
+                        name="age"
                     >
-                        <InputNumber placeholder="组织成员" />
+                        <InputNumber placeholder="年龄" />
                     </Form.Item>
                     <Form.Item
-                        label="time"
-                        name="createdAt"
+                        label="score"
+                        name="score"
                     >
-                        <Input placeholder="时间" />
+                        <InputNumber placeholder="分数" />
+                    </Form.Item>
+                    <Form.Item
+                        label="gender"
+                        name="gender"
+                    >
+                        <Input placeholder="性别" />
                     </Form.Item>
                 </Form>
             </Modal>
-        );
+            </>
+        )
     }
 }
 
-export default OrgDialog;
+
+// 声明要使用的context 对象属性
+StudentAdd.contextTypes = {
+    addStudent: PropTypes.func
+}
+
+export default StudentAdd

@@ -4,7 +4,7 @@ import WithRouter from '@/view/components/RouterPush/index'
 import '@/view/Home/Home.scss'
 import { setUserInfo } from '@/store/commonReducer'
 
-// 类组件 必须继承React.Component
+// 类组件 必须继承React.Component，且内部必须定义render方法，render 方法返回代表该组件UI 的React 元素
 class HomeManage extends React.Component{
     constructor(props) {
         super(props);

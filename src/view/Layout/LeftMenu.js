@@ -30,6 +30,7 @@ export default function LayoutBase() {
         getItem('组织管理','org',<LaptopOutlined />),
         getItem('项目管理','pro',<NotificationOutlined />),
         getItem('拖拽','drag',<NotificationOutlined />),
+        getItem('通信demo','demo',<NotificationOutlined />),
     ]
     const onClick = (item) => {
         navigate(`/sys/${item.key}`)

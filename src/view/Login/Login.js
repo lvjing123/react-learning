@@ -31,7 +31,7 @@ export default function Login(){
                 setLoginInfo(res)
               )
             // 成功后跳转
-            navigate('/sys/org')
+            navigate('/home')
         } catch (e) {
             console.log(e,'error')
             const msg = e.response.data.message
