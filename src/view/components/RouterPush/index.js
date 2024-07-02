@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 // 在 class 组件中，通常不推荐直接使用 useSelector。相反，你应该使用 react-redux 的 connect 方法来连接 Redux store。这样，你可以将 store 中的状态映射到组件的 props 中。
 // connect 是类组件取值的方法,类似于promanage 中的写法
 // 也就是没办法绑定在store 中了
+// 高阶组件， 可以共用props, router store
 function WithRouter(WrapperComponent) {
     function EnhanceComponent(props) {
         // 在函数组件中，调用 useNavigate hook 将结果作为props 传入

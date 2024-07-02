@@ -9,7 +9,7 @@ import OrgManage from "@/view/OrgManage/OrgManage";
 import ProManage from "@/view/ProManage/ProManage";
 import DragPage from "@/view/DragPage/DragPage";
 import DemoPage from "@/view/ContextDemo/index"
-
+import ContextDemo from "@/view/ContextAndReducer/index"
 
 
 const routerEls = [
@@ -28,7 +28,8 @@ const routerEls = [
         { path: 'org', element: <OrgManage /> },
         { path: "pro", element: <ProManage /> },
         { path: "drag", element: <DragPage /> },
-        { path: "demo", element: <DemoPage /> }
+        { path: "demo", element: <DemoPage /> },
+        { path: "context-demo", element: <ContextDemo /> }
       ]
     }
     ]

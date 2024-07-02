@@ -1,0 +1,46 @@
+.page-container {
+    .add-input{
+        width: 300px;
+    }
+    .ant-btn{
+        margin-left: 10px;
+    }
+    .task-item {
+        margin: 16px 0;
+        .check-box {
+            width: 50px;
+        }
+        .text-field {
+            display: inline-block;
+            width: 250px;
+        }
+        .task-item-input {
+            width: 250px;
+        }
+        .delete-btn {
+            border: 1px sienna solid;
+        }
+        .delete-btn:hover {
+            border: 1px sienna solid;
+            color: sienna;
+        }
+    }
+    .hook-item {
+        display: flex;
+        border: 1px solid lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 16px 0;
+        .name {
+            width: 100px;
+        }
+        .desciption {
+            flex: 1;
+        }
+        .link {
+          margin-left: 16px;
+          width: 48px;  
+        }
+    }
+    
+}

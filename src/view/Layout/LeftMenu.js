@@ -31,6 +31,7 @@ export default function LayoutBase() {
         getItem('项目管理','pro',<NotificationOutlined />),
         getItem('拖拽','drag',<NotificationOutlined />),
         getItem('通信demo','demo',<NotificationOutlined />),
+        getItem('context & reducer','context-demo',<NotificationOutlined />),
     ]
     const onClick = (item) => {
         navigate(`/sys/${item.key}`)
