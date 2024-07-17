@@ -6,6 +6,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import loginReducer from './loginReducer'
 import commonReducer from './commonReducer'
 import dragReducer from './dragReducer'
+import flowReducer from './flowReducer'
 
 // 这里可以用多个仓库
 // reducer 的 key值 要与 每个分reducer 保持一致
@@ -17,7 +18,8 @@ export default configureStore({
   reducer: {
     login: loginReducer,
     common: commonReducer,
-    drag: dragReducer
+    drag: dragReducer,
+    flow: flowReducer
   }
 })
 

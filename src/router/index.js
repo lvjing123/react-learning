@@ -10,7 +10,7 @@ import ProManage from "@/view/ProManage/ProManage";
 import DragPage from "@/view/DragPage/DragPage";
 import DemoPage from "@/view/ContextDemo/index"
 import ContextDemo from "@/view/ContextAndReducer/index"
-
+import FLow from "@/view/ReactFlow/index"
 
 const routerEls = [
     {
@@ -29,7 +29,8 @@ const routerEls = [
         { path: "pro", element: <ProManage /> },
         { path: "drag", element: <DragPage /> },
         { path: "demo", element: <DemoPage /> },
-        { path: "context-demo", element: <ContextDemo /> }
+        { path: "context-demo", element: <ContextDemo /> },
+        { path: "flow", element: <FLow /> }
       ]
     }
     ]
